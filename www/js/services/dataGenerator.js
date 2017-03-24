@@ -89,7 +89,7 @@ angular.module('breadcrumb').factory('Data', function () {
     },
     errorMap: {
       name: 'Error',
-      text: 'There was an error processing your request. Please check that you entered proper addresses and try again!',
+      text: 'There was an error processing your request. Please check that you entered crumb addresses correctly and try again!',
     },
   });
 
