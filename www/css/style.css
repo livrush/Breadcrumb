@@ -211,16 +211,20 @@
   position: relative;
 }
 
-.row+.row {
-  padding: 10px !important;
-}
-
 .margin-h {
   margin: 0 10px;
 }
 
 .margin-v {
   margin: 10px 0;
+}
+
+.padding-h {
+  padding: 0 10px;
+}
+
+.padding-v {
+  padding: 10px 0;
 }
 
 #map {

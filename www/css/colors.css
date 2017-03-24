@@ -1,11 +1,89 @@
-.gold {
-  color: gold;
+.maroon-t {
+  color: #a0030c;
 }
 
-.red {
-  color: red;
+.maroon-b {
+  background-color: #a0030c;
 }
 
-.blue {
-  color: blue;
+.maroon-l {
+  border: 1px solid #a0030c;
+}
+
+.rust-t {
+  color: #db6a32;
+}
+
+.rust-b {
+  background-color: #db6a32;
+}
+
+.rust-l {
+  border: 1px solid #db6a32;
+}
+
+.cream-t {
+  color: #fab1a0;
+  /*color: #e4dfbf;*/
+}
+
+.cream-b {
+  background-color: #fab1a0;
+  /*color: #e4dfbf;*/
+}
+
+.egg-t {
+  color: #e4dfbf;
+}
+
+.egg-b, item-content {
+  background-color: #e4dfbf;
+}
+
+.mint-t {
+  color: #95cebb;
+}
+
+.mint-b {
+  background-color: #95cebb;
+}
+
+.eggshell-t {
+  color: #c8f0ef;
+}
+
+.eggshell-b {
+  background-color: #c8f0ef;
+}
+
+.sea-t {
+  color: #3a7ec7;
+}
+
+.sea-b {
+  background-color: #3a7ec7;
+}
+
+.grey-t {
+  color: #bdb5b5;
+}
+
+.grey-b {
+  background-color: #bdb5b5;
+}
+
+.light-t {
+  color: #fbf0ed;
+}
+
+.light-b {
+  background-color: #fbf0ed;
+}
+
+.dark-t {
+  color: #3f3f3f;
+}
+
+.dark-b {
+  background-color: #3f3f3f;
 }

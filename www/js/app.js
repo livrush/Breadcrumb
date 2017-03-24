@@ -93,6 +93,8 @@ angular.module('breadcrumb', [
   });
 })
 .controller('AppCtrl', function ($scope, $rootScope, auth, store, $state, Data, Style) {
+  $scope.links = Data.menu;
+
   $scope.logout = () => {
     auth.signout();
     store.remove('token');
