@@ -87,6 +87,10 @@ angular.module('breadcrumb').factory('Data', function () {
       name: 'Reward Text',
       text: 'This is what shows up when the traveler reaches the crumb!',
     },
+    errorMap: {
+      name: 'Error',
+      text: 'There was an error processing your request. Please check that you entered proper addresses and try again!',
+    },
   });
 
   const arrayMaker = (num) => {

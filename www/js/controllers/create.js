@@ -187,10 +187,8 @@ angular.module('breadcrumb')
 
   $scope.reviewMap = () => {
     $scope.loading = null;
-    $scope.review.check = true;
     Map.add($scope.crumbs, $scope.trail.transport)
     .then((data) => {
-      $scope.loading = Style.displayNone;
       $scope.trail.map = data.image;
       $scope.trail.time = data.time;
       $scope.trail.length = data.miles;
@@ -199,8 +197,14 @@ angular.module('breadcrumb')
         moveY(crumb, -100);
       });
       $scope.review.style = Style.moveUp;
+      $scope.review.check = true;
       $scope.$apply();
     });
+    if (!$scope.review.check) {
+      console.log('There\'s been an error');
+      $scope.toggleInfo('errorMap');
+    }
+    $scope.loading = Style.displayNone;
   };
 
   $scope.reset = () => {
