@@ -93,9 +93,9 @@ angular.module('breadcrumb')
 
   // SEARCH
 
-  $scope.stars = Data.stars();
+  $scope.rating = Data.rating();
 
-  $scope.difficulties = Data.difficulties();
+  $scope.difficulty = Data.difficulty();
 
   $scope.transport = Data.transport();
 
@@ -104,17 +104,18 @@ angular.module('breadcrumb')
     $scope.search[type] = value;
   };
 
-  $scope.search = {
-    username: null,
-    name: null,
-    type: 'Any',
-    transport: 'Any',
-    rating: 'Any',
-    difficulty: 'Any',
-  };
+  $scope.search = Data.searchRequest();
 
   $scope.searchFilter = (request) => {
+    // TODO: Can't search by username, must get user ID first
+    if (request.difficulty !== 'Any') {
+      request.difficulty += 1;
+    }
     ListFact.get(request);
+    $scope.rating = Data.rating();
+    $scope.difficulty = Data.difficulty();
+    $scope.transport = Data.transport();
+    $scope.search = Data.searchRequest();
     $state.go('app.dashboard');
   };
 });

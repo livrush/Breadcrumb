@@ -77,10 +77,10 @@ angular.module('breadcrumb')
     }
   });
 
-  $scope.stars = Data.stars();
+  $scope.rating = Data.rating();
 
   $scope.ratingToggle = (value) => {
-    $scope.stars = Data.fillIcons('stars', value);
+    $scope.rating = Data.fillIcons('rating', value);
     $scope.postTrail.rating = value;
   };
 

@@ -16,8 +16,8 @@ angular.module('breadcrumb').factory('ListFact', function ($rootScope, $http) {
   };
 
   const getTrails = (request) => {
-    // let link = 'http://192.168.99.100/trails';
-    let link = 'http://54.203.104.113/trails';
+    let link = 'http://192.168.99.100/trails';
+    // let link = 'http://54.203.104.113/trails';
     if (request === 'id') {
       link += `?id=${$rootScope.trailID}`;
     } else if (request) {
@@ -39,10 +39,10 @@ angular.module('breadcrumb').factory('ListFact', function ($rootScope, $http) {
       response.data.data.forEach((trail) => {
         trail.style = closeStyle;
         // TODO: Integrate actual algorithm to calculate rating from trail.score
-        const stars = trail.rating || Math.floor(Math.random() * 6);
-        const emptyStars = 5 - stars;
+        const rating = trail.rating || Math.floor(Math.random() * 6);
+        const emptyStars = 5 - rating;
         const difficulty = trail.difficulty;
-        trail.stars = arrayMaker(stars);
+        trail.rating = arrayMaker(rating);
         trail.emptyStars = arrayMaker(emptyStars);
         trail.difficulty = arrayMaker(difficulty);
         data.push(trail);
@@ -57,8 +57,8 @@ angular.module('breadcrumb').factory('ListFact', function ($rootScope, $http) {
   const deleteTrail = (trail) => {
     $http({
       method: 'DELETE',
-      url: `http://54.203.104.113/trails/${trail.id}`,
-      // url: `http://192.168.99.100/trails/${trail.id}`,
+      // url: `http://54.203.104.113/trails/${trail.id}`,
+      url: `http://192.168.99.100/trails/${trail.id}`,
     })
     .then(res => console.warn(res))
     .catch(res => console.error(res));
@@ -68,7 +68,7 @@ angular.module('breadcrumb').factory('ListFact', function ($rootScope, $http) {
     const items = list.slice();
     if (value) {
       return items.filter(item => item[type] === value);
-    } else if (type === 'stars') {
+    } else if (type === 'rating') {
       return items.sort((a, b) => {
         if (a[type] > b[type]) return -1;
         if (a[type] < b[type]) return 1;

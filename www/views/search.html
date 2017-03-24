@@ -30,9 +30,9 @@
         <div class="col s-2x right">
           <i
             class="ion-android-star padding"
-            ng-repeat="star in stars"
+            ng-repeat="star in rating"
             ng-style="star.style"
-            ng-click="searchToggle('stars', $index, { color: 'gold' })"
+            ng-click="searchToggle('rating', $index, { color: 'gold' })"
           ></i>
         </div>
       </div>
@@ -45,9 +45,9 @@
         <div class="col s-2x right">
           <i
             class="ion-ribbon-b padding"
-            ng-repeat="diff in difficulties"
+            ng-repeat="diff in difficulty"
             ng-style="diff.style"
-            ng-click="searchToggle('difficulties', $index, { color: 'purple' })"
+            ng-click="searchToggle('difficulty', $index, { color: 'purple' })"
           ></i>
         </div>
       </div>
