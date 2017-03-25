@@ -21,19 +21,66 @@
     100% {transform: translate(0px, 0px)}
 }
 
+@keyframes walk {
+    0%   {transform: translate(-10px, 0px) rotate(-10deg);}
+    50%   {transform: translate(10px, 0px) rotate(10deg);}
+    100% {transform: translate(-10px, 0px) rotate(-10deg);}
+}
+
 @keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
 
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
 
+.shadow {
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
 .rotate {
   position: absolute;
-  top: 300px;
-  left: -212.5px;
-  animation: spin 20s linear infinite;
-  -moz-animation: spin 20s linear infinite;
-  -webkit-animation: spin 20s linear infinite;
+  top: 200px;
+  left: -412.5px;
+  animation: spin 25s linear infinite;
+  -moz-animation: spin 25s linear infinite;
+  -webkit-animation: spin 25s linear infinite;
+}
+
+.stars {
+  position: absolute;
+  top: 0px;
+  left: -1012.5px;
+  animation: spin 75s linear infinite;
+  -moz-animation: spin 75s linear infinite;
+  -webkit-animation: spin 75s linear infinite;
+  z-index: 0;
+}
+
+.children {
+  width: 150px;
+  position: absolute;
+  top: 350px;
+  z-index: 100;
+}
+
+.child {
+  animation: walk 0.5s linear infinite;
+  width: 70px;
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+.low-button {
+  position: absolute;
+  top: 550px;
+  text-decoration: none;
+  font-size: 3em;
+  font-weight: bold;
+  color: #e2c7a2;
+}
+
+.center-h {
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 ion-content {
@@ -78,7 +125,7 @@ ion-content {
 }
 
 .logo {
-  background-image: url('../img/temp.png');
+  background-image: url('../img/logo.gif');
   background-position: center;
   background-size: cover;
   text-align: center;

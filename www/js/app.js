@@ -109,6 +109,9 @@ angular.module('breadcrumb', [
     console.warn(input);
   };
 
+  $scope.child1 = Data.child();
+  $scope.child2 = Data.child();
+
   $scope.setTrail = (id) => {
     localStorage.setItem('trail', id);
     $rootScope.trailID = id;

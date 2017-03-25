@@ -2,17 +2,22 @@
 <ion-view >
 
   <ion-content scroll="false" class="sea-b">
-
-    <div class="logo"></div>
-    <h1 class="center">Breadcrumb</h1>
-    <br>
-    <img class="rotate" src="../img/world.png" alt="">
-
-    <div class="row" style="position: relative; top: 250px" ng-click="">
-      <button class="button button-full button-positive" ui-sref="auth0">
-        Log in with Social Media
-      </button>
+    <div class="float float37" style="position: relative; z-index: 99;">
+      <div class="logo shadow"></div>
+      <!-- <h1 class="center ">Breadcrumb</h1> -->
     </div>
+
+    <div class="children center-h shadow">
+      <img class="child" src="{{ child1 }}" alt="">
+      <img class="child" src="{{ child2 }}" alt="">
+    </div>
+    <!-- <img class="stars" src="../img/clouds.gif" alt=""> -->
+    <img class="rotate shadow" src="../img/big-world.gif" alt="">
+
+
+    <a class="low-button row center-h" ui-sref="auth0">
+      Log in
+    </a>
 
 
   </ion-content>
