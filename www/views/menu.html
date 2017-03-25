@@ -2,28 +2,28 @@
 <ion-side-menus>
 
   <ion-pane ion-side-menu-content drag-content="false">
-    <ion-nav-bar class="bar egg-b">
+    <ion-nav-bar class="bar">
       <!-- <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button> -->
     </ion-nav-bar>
     <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
   </ion-pane>
 
-  <ion-side-menu side="left" width="200" class="egg-b">
+  <ion-side-menu side="left" width="200" class="eggshell-b">
     <header class="bar bar-header" menu-toggle="left">
-      <h1 class="title maroon-t">{{ user }}</h1>
+      <h1 class="title">{{ user }}</h1>
     </header>
-    <ion-content class="has-header">
+    <ion-content class="has-header eggshell-b">
       <ion-list>
         <ion-item
           ng-repeat="link in links"
           nav-clear
           menu-close
-          class="maroon-t rust-l egg-b"
+          class="mint-t mint-l"
           ui-sref="{{ link.link }}"
         >
           <i class="{{ link.icon }} margin-h"></i> {{ link.name }}
         </ion-item>
-        <ion-item nav-clear menu-close class="maroon-t rust-l egg-b" ng-click="logout()">
+        <ion-item nav-clear menu-close class="mint-t mint-l" ng-click="logout()">
           <i class="ion-log-out margin-h"></i>
           Log out
         </ion-item>

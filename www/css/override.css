@@ -1,12 +1,28 @@
-.bar, .item, .item-content {
+.bar, .item, .item-content, .item-complex,
+.item-complex .item-content {
   background: none;
-  color: black;
   border: none;
 }
 
-/*.card {
-  background: red;
-}*/
+.bar {
+  background-color: #573d38;
+  box-shadow: 0 0 5px #fbf0ed;
+}
+
+.bar .title, .bar .button {
+  color: #e2c7a2;
+}
+
+.card {
+  margin-top: 10px;
+  background-color: #fbf0ed;
+}
+
+.item-divider {
+  padding-top: 15px;
+  background-color: #f1dfcf;
+  box-shadow: 0 0 5px 0 #573d38;
+}
 
 .row {
   width: auto;
@@ -17,4 +33,15 @@
   padding-top: 10px;
   padding: 5px;
   border: none;
+}
+
+.button.button-block,
+.button.button-full {
+  margin: 0;
+  background-color: #fab1a0;
+}
+
+.bar-footer {
+  height: 75px;
+  background-color: #3a7ec7;
 }

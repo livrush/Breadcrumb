@@ -19,7 +19,7 @@
 }
 
 .rust-l {
-  border: 1px solid #db6a32;
+  border-top: 1px solid #db6a32;
 }
 
 .cream-t {
@@ -33,19 +33,23 @@
 }
 
 .egg-t {
-  color: #e4dfbf;
+  color: #e2c7a2;
 }
 
 .egg-b, item-content {
-  background-color: #e4dfbf;
+  background-color: #e2c7a2;
 }
 
 .mint-t {
-  color: #95cebb;
+  color: #73aa95;
 }
 
 .mint-b {
   background-color: #95cebb;
+}
+
+.mint-l {
+  border-top: 1px solid #95cebb;
 }
 
 .eggshell-t {

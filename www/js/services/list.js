@@ -1,11 +1,5 @@
 /* eslint no-underscore-dangle: ["error", { "allow": ["_geofences", "_geofencesPromise"] }] */
-angular.module('breadcrumb').factory('ListFact', function ($rootScope, $http) {
-  const closeStyle = {
-    height: '95px',
-    'transition-duration': '250ms',
-    overflow: 'hidden',
-  };
-
+angular.module('breadcrumb').factory('ListFact', function ($rootScope, $http, Style) {
   const arrayMaker = (num) => {
     const arr = [];
     let i;
@@ -37,7 +31,7 @@ angular.module('breadcrumb').factory('ListFact', function ($rootScope, $http) {
     .then((response) => {
       const data = [];
       response.data.data.forEach((trail) => {
-        trail.style = closeStyle;
+        trail.style = Style.inactiveTrail;
         // TODO: Integrate actual algorithm to calculate rating from trail.score
         const rating = trail.rating || Math.floor(Math.random() * 6);
         const emptyStars = 5 - rating;
@@ -85,7 +79,6 @@ angular.module('breadcrumb').factory('ListFact', function ($rootScope, $http) {
   return {
     get: getTrails,
     del: deleteTrail,
-    close: closeStyle,
     range: arrayMaker,
     filter: filterListItems,
   };

@@ -16,7 +16,7 @@ angular.module('breadcrumb')
 
   const moveReset = (crumb, index) => {
     crumb.left = 100 * index;
-    const move = `${crumb.left += 2.5}%`;
+    const move = `${crumb.left += 5}%`;
     crumb.style = Style.moveReset(move);
   };
 
@@ -31,7 +31,7 @@ angular.module('breadcrumb')
     requires_money: false,
     transport: null,
     crumbs: {},
-    left: 2.5,
+    left: 5,
     style: null,
   });
 
@@ -123,7 +123,7 @@ angular.module('breadcrumb')
     latitude: null,
     longitude: null,
     address: null,
-    left: 2.5,
+    left: 5,
     style: { 'animation-name': 'moveInFromRight' },
   });
 

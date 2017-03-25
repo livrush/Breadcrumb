@@ -21,6 +21,25 @@
     100% {transform: translate(0px, 0px)}
 }
 
+@keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(-360deg); } }
+
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
+
+.rotate {
+  position: absolute;
+  top: 300px;
+  left: -212.5px;
+  animation: spin 20s linear infinite;
+  -moz-animation: spin 20s linear infinite;
+  -webkit-animation: spin 20s linear infinite;
+}
+
+ion-content {
+  background-color: #fdf7f6;
+}
+
 .round {
   border-radius: 50%;
 }
@@ -84,10 +103,6 @@
   border: 0;
 }
 
-.col.button.button-block {
-  margin: 0;
-}
-
 .loading {
   background-image: url('../img/loading.gif');
 }
@@ -102,11 +117,11 @@
   border-radius: 5px;
 }
 
-.clearInput {
+input {
   width: 100%;
-  text-align: center;
-  background: transparent;
   height: 150%;
+  margin: 0;
+  background: transparent;
 }
 
 .platform-android .action-sheet-cancel {
@@ -122,12 +137,11 @@
 }
 
 .margin-top {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .center {
   text-align: center;
-  display: flex;
   align-items: center;
   justify-content: space-around;
   margin: auto;
@@ -155,7 +169,8 @@
 
 .abs {
   position: absolute;
-  left: 2.5%;
+  top: 2.5%;
+  left: 5%;
   width: 90%;
   margin: auto;
   animation-duration: 250ms;
